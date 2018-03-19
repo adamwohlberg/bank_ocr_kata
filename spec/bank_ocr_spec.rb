@@ -1,3 +1,5 @@
+require 'byebug'
+
 describe BankOcr do
   it "is a module" do
     expect(BankOcr).to be_a Module
