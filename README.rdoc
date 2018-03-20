@@ -4,9 +4,9 @@ Thank you for reviewing this project:
 
 * rails c
 
-* Parser.parse_file('000000000')
+* passing tests: rspec spec/models/parser_spec.rb:6
 
-* Parser.checksum('111111111')
+* all tests: rspec spec/models/parser_spec.rb
 
 
 
