@@ -12,7 +12,7 @@ gem 'pg', '~> 0.18.4'
 
 group :development, :test do
   gem 'byebug'
-  gem 'web-console', '~> 2.0'
   gem 'spring'
+  gem 'rspec-rails', '~> 3.7'
 end
 
