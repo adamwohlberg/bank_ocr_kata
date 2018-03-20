@@ -31,15 +31,15 @@ class Parser < ActiveRecord::Base
     array_to_account_numbers(n0,n1,n2,n3,n4,n5,n6,n7,n8)
   end
 
-  # def self.checksum(name)
-  #   # https://stackoverflow.com/questions/7372489/whats-the-efficient-way-to-multiply-two-arrays-and-get-sum-of-multiplied-values?rq=1
-  #   account_number = self.parse_file(name) 
-  #   array_A = [1,2,3,4,5,6,7,8,9]
-  #   array_B = account_number.split('').to_a.map{|x|x.to_i}
-  #   total = (0...array_A.count).inject(0) {|r, i| r + array_A[i]*array_B[i]}
-  #   return true if (( total % 11 ) == 0 )
-  #   false
-  # end
+  def self.checksum(name)
+    # https://stackoverflow.com/questions/7372489/whats-the-efficient-way-to-multiply-two-arrays-and-get-sum-of-multiplied-values?rq=1
+    account_number = self.parse_file(name) 
+    array_A = [1,2,3,4,5,6,7,8,9]
+    array_B = account_number.split('').to_a.map{|x|x.to_i}
+    total = (0...array_A.count).inject(0) {|r, i| r + array_A[i]*array_B[i]}
+    return true if (( total % 11 ) == 0 )
+    false
+  end
 
   private
 
