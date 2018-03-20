@@ -48,7 +48,6 @@ class Parser < ActiveRecord::Base
     file = File.join(Rails.root, '/fixtures', "#{name}.txt")
     array = []
     File.readlines(file).each_with_index do |line,index|
-      # get each line as an array of nine nested arrays, each with three characters 
       arr = line.chomp.split('').each_slice(3).to_a
       array << arr
     end
@@ -56,6 +55,7 @@ class Parser < ActiveRecord::Base
   end
 
   def self.pretty_print(array)
+    # ex. '[[" ", "_", " "], ["|", " ", "|"], ["|", "_", "|"]]'
     p array[0]
     p array[1]
     p array[2]
